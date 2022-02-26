@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Modal, Box } from "@mui/material";
-
+import { MachineLearningPJTImg } from "./styles";
 const style = {
   position: "absolute",
   top: "50%",
@@ -36,12 +36,25 @@ export default function ProjectGraduation() {
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
       >
-        <Box sx={{ ...style, width: 600 }}>
+        <Box sx={{ ...style, fontFamily: "neodgm_pro", width: 650 }}>
           <h2 id="child-modal-title">
             독거노인을 위한 라즈베리파이에서의 음성인식 기능 구현
           </h2>
-          <p id="child-modal-description">내용</p>
-          <Button onClick={handleClose}>Close Child Modal</Button>
+          <MachineLearningPJTImg />
+          <p id="child-modal-description">
+            <br />
+            졸업작품으로 진행한 산학협력프로젝트!
+            <br />
+            <br />
+            독거노인을 위한 음성인식 기능 구현을 위해 라즈베리파이 소형보드에서
+            구현
+          </p>
+          <Button
+            style={{ fontFamily: "neodgm_pro", left: "600px" }}
+            onClick={handleClose}
+          >
+            닫기
+          </Button>
         </Box>
       </Modal>
     </React.Fragment>

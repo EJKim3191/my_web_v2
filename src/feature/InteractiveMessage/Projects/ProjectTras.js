@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Modal, Box } from "@mui/material";
-
+import { TrasImg } from "./styles";
 const style = {
   position: "absolute",
   top: "50%",
@@ -36,12 +36,25 @@ export default function ProjectTras() {
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
       >
-        <Box sx={{ ...style, width: 600 }}>
+        <Box sx={{ ...style, fontFamily: "neodgm_pro", width: 600 }}>
           <h2 id="child-modal-title">
             방한 외국인을 위한 여행 분석 사이트 : 빅데이터 프로젝트
           </h2>
-          <p id="child-modal-description">내용</p>
-          <Button onClick={handleClose}>Close Child Modal</Button>
+          <TrasImg />
+          <p id="child-modal-description">
+            <br />
+            외국 사이트(영어권) 댓글들을 분석하여 장소에 대한 대표적인 감정과
+            선호도 제공!
+            <br />
+            <br />
+            이외에도 군집화를 통해 거리별 장소 묶음 및 다음 경로 추천
+          </p>
+          <Button
+            style={{ fontFamily: "neodgm_pro", left: "550px" }}
+            onClick={handleClose}
+          >
+            닫기
+          </Button>
         </Box>
       </Modal>
     </React.Fragment>

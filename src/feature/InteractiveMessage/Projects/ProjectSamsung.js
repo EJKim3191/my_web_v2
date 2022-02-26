@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Modal, Box } from "@mui/material";
-import { ProjectSsafy } from "./styles";
+import { ProjectSsafyImg } from "./styles";
 const style = {
   position: "absolute",
   top: "50%",
@@ -40,8 +40,9 @@ export default function ProjectSamsung() {
           <h2 id="child-modal-title">
             삼성청년소프트웨어아카데미 1학기 관통프로젝트
           </h2>
-          <ProjectSsafy />
+          <ProjectSsafyImg />
           <p id="child-modal-description">
+            <br />
             Java Project -{">"}
             Web(Front-End) -{">"}Project Web(Back-End) Project -{">"}DB Project
             FrameWork Project -{">"}알고리즘 적용 Project -{">"}Vue Project
