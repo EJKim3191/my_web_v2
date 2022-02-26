@@ -1,12 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
-import Cafe24Ssurround from "./Cafe24Ssurround/Cafe24Ssurround.ttf";
+import neodgm_pro from "./Neodgm/neodgm_pro.ttf";
 
 export default createGlobalStyle`
 @font-face {
-    font-family: "Cafe24Ssurround";
-    src: local("Cafe24Ssurround"), 
-    url(${Cafe24Ssurround}) format("woff");
+    font-family: "neodgm_pro";
+    src: local("neodgm_pro"), 
+    url(${neodgm_pro}) format("woff");
     font-weight: normal;
     font-style: normal;
   }

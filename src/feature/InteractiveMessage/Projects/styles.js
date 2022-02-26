@@ -11,5 +11,5 @@ export const ProjectNadeulImg = styled.div`
 `;
 
 export const BoxContent = styled.div`
-  font-family: "Cafe24Ssurround";
+  font-family: "neodgm_pro";
 `;
