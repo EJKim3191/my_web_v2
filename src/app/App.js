@@ -8,6 +8,7 @@ import Interactive_Person from "../feature/Map/Interactive_Person";
 // Interactive message
 import MessageScientist from "../feature/InteractiveMessage/MessageProjects";
 import MessageProjects from "../feature/InteractiveMessage/MessageScientist";
+import MessageContatct from "../feature/InteractiveMessage/MessageContact";
 import { useDispatch, useSelector } from "react-redux";
 import { handleMove } from "../feature/MainReducer";
 // eslint-disable-next-line no-unused-vars
@@ -32,6 +33,7 @@ export default function () {
       <Interactive_Person />
       <MessageScientist />
       <MessageProjects />
+      <MessageContatct />
     </div>
   );
 }

@@ -12,3 +12,9 @@ export const Interactive_PersonImg2 = styled.img`
   left: 600px;
   z-index: 2;
 `;
+export const Interactive_ContatctImg2 = styled.img`
+  position: absolute;
+  top: 500px;
+  left: 500px;
+  z-index: 2;
+`;
