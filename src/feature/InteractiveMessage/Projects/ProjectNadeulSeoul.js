@@ -26,7 +26,9 @@ export default function ProjectNadeulSeoul() {
 
   return (
     <React.Fragment>
-      <Button onClick={handleOpen}>나들서울</Button>
+      <Button style={{ fontFamily: "neodgm_pro" }} onClick={handleOpen}>
+        나들서울
+      </Button>
       <Modal
         hideBackdrop
         open={open}
@@ -62,7 +64,10 @@ export default function ProjectNadeulSeoul() {
               싶지만 매일 같은 곳만 가게 되는 사용자들에게 다른 사람들의 나들이
               코스를 소개하고 정보를 제공합니다
             </p>
-            <Button style={{ left: `550px` }} onClick={handleClose}>
+            <Button
+              style={{ fontFamily: "neodgm_pro", left: `550px` }}
+              onClick={handleClose}
+            >
               닫기
             </Button>
           </BoxContent>

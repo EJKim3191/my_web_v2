@@ -26,7 +26,9 @@ export default function ProjectTras() {
 
   return (
     <React.Fragment>
-      <Button onClick={handleOpen}>TRAS</Button>
+      <Button style={{ fontFamily: "neodgm_pro" }} onClick={handleOpen}>
+        TRAS
+      </Button>
       <Modal
         hideBackdrop
         open={open}

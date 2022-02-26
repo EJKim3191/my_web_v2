@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Modal, Box } from "@mui/material";
-
+import { ProjectSsafy } from "./styles";
 const style = {
   position: "absolute",
   top: "50%",
@@ -26,7 +26,9 @@ export default function ProjectSamsung() {
 
   return (
     <React.Fragment>
-      <Button onClick={handleOpen}>SSAFY 관통프로젝트</Button>
+      <Button style={{ fontFamily: "neodgm_pro" }} onClick={handleOpen}>
+        SSAFY 관통프로젝트
+      </Button>
       <Modal
         hideBackdrop
         open={open}
@@ -34,12 +36,27 @@ export default function ProjectSamsung() {
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
       >
-        <Box sx={{ ...style, width: 600 }}>
+        <Box style={{ fontFamily: "neodgm_pro" }} sx={{ ...style, width: 600 }}>
           <h2 id="child-modal-title">
             삼성청년소프트웨어아카데미 1학기 관통프로젝트
           </h2>
-          <p id="child-modal-description">내용</p>
-          <Button onClick={handleClose}>Close Child Modal</Button>
+          <ProjectSsafy />
+          <p id="child-modal-description">
+            Java Project -{">"}
+            Web(Front-End) -{">"}Project Web(Back-End) Project -{">"}DB Project
+            FrameWork Project -{">"}알고리즘 적용 Project -{">"}Vue Project
+            Final Project 순서로 진행된 관통 프로젝트
+            <br />
+            <br />
+            기술들이 발전된 순서대로 적용해보며 마지막으로 Back(Spring Boot)과
+            Front(Vue)를 적용해본 프로젝트
+          </p>
+          <Button
+            style={{ fontFamily: "neodgm_pro", left: `550px` }}
+            onClick={handleClose}
+          >
+            닫기
+          </Button>
         </Box>
       </Modal>
     </React.Fragment>

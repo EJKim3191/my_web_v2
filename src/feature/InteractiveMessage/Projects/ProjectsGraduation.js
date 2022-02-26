@@ -26,7 +26,9 @@ export default function ProjectGraduation() {
 
   return (
     <React.Fragment>
-      <Button onClick={handleOpen}>라즈베리파이 음성인식 기능 구현</Button>
+      <Button style={{ fontFamily: "neodgm_pro" }} onClick={handleOpen}>
+        라즈베리파이 음성인식 기능 구현
+      </Button>
       <Modal
         hideBackdrop
         open={open}

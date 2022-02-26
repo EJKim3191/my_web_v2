@@ -47,7 +47,7 @@ export default function MessageProjects() {
         aria-labelledby="parent-modal-title"
         aria-describedby="parent-modal-description"
       >
-        <Box sx={{ ...style, width: 400 }}>
+        <Box sx={{ ...style, fontFamily: "neodgm_pro", width: 400 }}>
           <h2 id="parent-modal-title">나의 프로젝트...</h2>
           <p id="parent-modal-description">
             누군가는 내 노고를... 알아주리라 생각하며... 이렇게 기록을...
