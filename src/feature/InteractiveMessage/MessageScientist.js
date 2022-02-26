@@ -138,7 +138,7 @@ function MessageScientist() {
               next page..
             </Button>
           )}{" "}
-          <Button style={{ fontFamily: "neodgm_pro" }}>닫기</Button>
+          <Button style={{ fontFamily: "neodgm_pro" }}>Close</Button>
         </Box>
       </Modal>
     </div>

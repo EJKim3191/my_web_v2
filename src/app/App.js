@@ -4,6 +4,7 @@ import LandingPage from "../feature/LandingPage";
 // 케릭터
 import Character from "../feature/Character/Character";
 // 맵과 맵 구조물
+import House from "../feature/Map/House";
 import Interactive_Person from "../feature/Map/Interactive_Person";
 // Interactive message
 import MessageScientist from "../feature/InteractiveMessage/MessageProjects";
@@ -29,6 +30,7 @@ export default function () {
   return (
     <div>
       <LandingPage />
+      <House />
       <Character />
       <Interactive_Person />
       <MessageScientist />
