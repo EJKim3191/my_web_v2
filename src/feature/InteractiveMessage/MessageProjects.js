@@ -32,7 +32,7 @@ export default function MessageProjects() {
     setOpen(true);
   };
   useEffect(() => {
-    if (x === 400 && y === 400) {
+    if (x === 200 && y === 100) {
       console.log("닿았지롱");
       hadnleOpen();
     } else {

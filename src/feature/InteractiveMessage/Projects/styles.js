@@ -7,9 +7,9 @@ import machineLearningPJT from "../../../img/pixelImg/projects/machineLearning/m
 import tras from "../../../img/pixelImg/projects/tras/Tras.png";
 
 export const ProjectNadeulImg = styled.div`
-  width: 600px;
-  height: 250px;
-  background-size: contain;
+  width: 50vw;
+  height: 40vh;
+  background-size: cover;
   background-image: url(${nadeul_main});
 `;
 
@@ -18,22 +18,22 @@ export const BoxContent = styled.div`
 `;
 
 export const ProjectSsafyImg = styled.div`
-  width: 600px;
-  height: 400px;
+  width: 50vw;
+  height: 40vh;
   background-size: cover;
   background-image: url(${ssafy_project});
 `;
 
 export const MachineLearningPJTImg = styled.div`
-  width: 600px;
-  height: 400px;
+  width: 50vw;
+  height: 60vh;
   background-size: cover;
   background-image: url(${machineLearningPJT});
 `;
 
 export const TrasImg = styled.div`
-  width: 600px;
-  height: 400px;
+  width: 50vw;
+  height: 50vh;
   background-size: cover;
   background-image: url(${tras});
 `;

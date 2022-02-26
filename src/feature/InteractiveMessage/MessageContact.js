@@ -28,7 +28,7 @@ export default function MessageContatct() {
     setOpen(true);
   };
   useEffect(() => {
-    if (x === 500 && y === 500) {
+    if (x === 100 && y === 100) {
       console.log("닿았지롱");
       hadnleOpen();
     } else {

@@ -36,7 +36,10 @@ export default function ProjectSamsung() {
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
       >
-        <Box style={{ fontFamily: "neodgm_pro" }} sx={{ ...style, width: 600 }}>
+        <Box
+          style={{ fontFamily: "neodgm_pro" }}
+          sx={{ ...style, width: "50vw" }}
+        >
           <h2 id="child-modal-title">
             삼성청년소프트웨어아카데미 1학기 관통프로젝트
           </h2>

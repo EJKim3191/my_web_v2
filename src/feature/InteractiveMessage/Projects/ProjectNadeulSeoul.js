@@ -36,7 +36,7 @@ export default function ProjectNadeulSeoul() {
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
       >
-        <Box sx={{ ...style, width: 600 }}>
+        <Box sx={{ ...style, width: "50vw" }}>
           <BoxContent>
             <h2 id="child-modal-title">나들서울 프로젝트</h2>
             <ProjectNadeulImg />

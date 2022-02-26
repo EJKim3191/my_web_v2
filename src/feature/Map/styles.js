@@ -2,19 +2,19 @@ import styled from "styled-components";
 
 export const Interactive_PersonImg = styled.img`
   position: absolute;
-  top: 400px;
-  left: 400px;
+  top: 100px;
+  left: 100px;
   z-index: 2;
 `;
 export const Interactive_PersonImg2 = styled.img`
   position: absolute;
-  top: 600px;
-  left: 600px;
+  top: 100px;
+  left: 200px;
   z-index: 2;
 `;
 export const Interactive_ContatctImg2 = styled.img`
   position: absolute;
-  top: 500px;
-  left: 500px;
+  top: 100px;
+  left: 300px;
   z-index: 2;
 `;

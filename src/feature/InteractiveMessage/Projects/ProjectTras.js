@@ -36,7 +36,7 @@ export default function ProjectTras() {
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
       >
-        <Box sx={{ ...style, fontFamily: "neodgm_pro", width: 600 }}>
+        <Box sx={{ ...style, fontFamily: "neodgm_pro", width: "50vw" }}>
           <h2 id="child-modal-title">
             방한 외국인을 위한 여행 분석 사이트 : 빅데이터 프로젝트
           </h2>

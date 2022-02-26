@@ -36,7 +36,7 @@ export default function ProjectGraduation() {
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
       >
-        <Box sx={{ ...style, fontFamily: "neodgm_pro", width: 650 }}>
+        <Box sx={{ ...style, fontFamily: "neodgm_pro", width: "50vw" }}>
           <h2 id="child-modal-title">
             독거노인을 위한 라즈베리파이에서의 음성인식 기능 구현
           </h2>
