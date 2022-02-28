@@ -19,6 +19,9 @@ const style = {
 export default function MessageContatct() {
   const x = useSelector((state) => state.main.x);
   const y = useSelector((state) => state.main.y);
+  const movementValue = useSelector((state) => state.main.movementValue);
+  const startPosX = useSelector((state) => state.main.startPosX);
+  const startPosY = useSelector((state) => state.main.startPosY);
   const [open, setOpen] = useState(false);
 
   const handleClose = () => {
@@ -28,8 +31,12 @@ export default function MessageContatct() {
     setOpen(true);
   };
   useEffect(() => {
-    if (x === 100 && y === 100) {
-      console.log("닿았지롱");
+    if (
+      x <= startPosX + 2 * movementValue &&
+      x >= startPosX + 1.5 * movementValue &&
+      y <= startPosY + 4 * movementValue &&
+      y >= startPosY + 3.5 * movementValue
+    ) {
       hadnleOpen();
     } else {
       handleClose();
