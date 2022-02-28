@@ -50,7 +50,7 @@ export default function ProjectGraduation() {
             구현
           </p>
           <Button
-            style={{ fontFamily: "neodgm_pro", left: "600px" }}
+            style={{ fontFamily: "neodgm_pro", right: "0vw" }}
             onClick={handleClose}
           >
             닫기

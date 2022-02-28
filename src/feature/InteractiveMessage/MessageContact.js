@@ -32,9 +32,9 @@ export default function MessageContatct() {
   };
   useEffect(() => {
     if (
-      x <= startPosX + 2 * movementValue &&
+      x <= startPosX + 2.5 * movementValue &&
       x >= startPosX + 1.5 * movementValue &&
-      y <= startPosY + 4 * movementValue &&
+      y <= startPosY + 4.5 * movementValue &&
       y >= startPosY + 3.5 * movementValue
     ) {
       hadnleOpen();

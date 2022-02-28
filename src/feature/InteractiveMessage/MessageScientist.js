@@ -18,6 +18,9 @@ const style = {
 function MessageScientist() {
   const x = useSelector((state) => state.main.x);
   const y = useSelector((state) => state.main.y);
+  const movementValue = useSelector((state) => state.main.movementValue);
+  const startPosX = useSelector((state) => state.main.startPosX);
+  const startPosY = useSelector((state) => state.main.startPosY);
   const [open, setOpen] = useState(false);
   const [page, setPage] = useState(0);
 
@@ -37,8 +40,12 @@ function MessageScientist() {
   };
 
   useEffect(() => {
-    if (x === 300 && y === 100) {
-      console.log("닿았지롱");
+    if (
+      x <= startPosX - 7.5 * movementValue &&
+      x >= startPosX - 8.5 * movementValue &&
+      y <= startPosY + 0.5 * movementValue &&
+      y >= startPosY - 0.5 * movementValue
+    ) {
       hadnleOpen();
     } else {
       handleClose();
@@ -138,7 +145,12 @@ function MessageScientist() {
               next page..
             </Button>
           )}{" "}
-          <Button style={{ fontFamily: "neodgm_pro" }}>Close</Button>
+          <Button
+            onClick={handleClose}
+            style={{ fontFamily: "neodgm_pro", right: "0vw" }}
+          >
+            Close
+          </Button>
         </Box>
       </Modal>
     </div>

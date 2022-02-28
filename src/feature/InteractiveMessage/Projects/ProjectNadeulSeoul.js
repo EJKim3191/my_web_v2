@@ -70,7 +70,7 @@ export default function ProjectNadeulSeoul() {
               코스를 소개하고 정보를 제공합니다
             </p>
             <Button
-              style={{ fontFamily: "neodgm_pro", left: `550px` }}
+              style={{ fontFamily: "neodgm_pro", right: "0vw" }}
               onClick={handleClose}
             >
               닫기

@@ -56,7 +56,7 @@ export default function ProjectSamsung() {
             Front(Vue)를 적용해본 프로젝트
           </p>
           <Button
-            style={{ fontFamily: "neodgm_pro", left: `550px` }}
+            style={{ fontFamily: "neodgm_pro", right: "0vw" }}
             onClick={handleClose}
           >
             닫기

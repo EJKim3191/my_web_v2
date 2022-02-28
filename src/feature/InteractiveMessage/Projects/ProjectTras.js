@@ -50,7 +50,7 @@ export default function ProjectTras() {
             이외에도 군집화를 통해 거리별 장소 묶음 및 다음 경로 추천
           </p>
           <Button
-            style={{ fontFamily: "neodgm_pro", left: "550px" }}
+            style={{ fontFamily: "neodgm_pro", right: "0vw" }}
             onClick={handleClose}
           >
             닫기
