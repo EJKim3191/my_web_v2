@@ -21,7 +21,6 @@ function LandingPage() {
     } else {
       setBackground(dawnbackground);
     }
-    console.log(date.getHours(), "date");
   }, []);
 
   return (
