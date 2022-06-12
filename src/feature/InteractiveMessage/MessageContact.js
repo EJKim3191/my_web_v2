@@ -19,7 +19,9 @@ const style = {
 export default function MessageContatct() {
   const x = useSelector((state) => state.main.x);
   const y = useSelector((state) => state.main.y);
-  const movementValue = useSelector((state) => state.main.movementValue);
+  const movementValueByX= useSelector((state) => state.main.movementValueByX);
+  const movementValueByY= useSelector((state) => state.main.movementValueByY);
+
   const startPosX = useSelector((state) => state.main.startPosX);
   const startPosY = useSelector((state) => state.main.startPosY);
   const [open, setOpen] = useState(false);
@@ -32,10 +34,10 @@ export default function MessageContatct() {
   };
   useEffect(() => {
     if (
-      x <= startPosX + 2.5 * movementValue &&
-      x >= startPosX + 1.5 * movementValue &&
-      y <= startPosY + 4.5 * movementValue &&
-      y >= startPosY + 3.5 * movementValue
+      x <= startPosX + 2.5 * movementValueByX &&
+      x >= startPosX + 1.5 * movementValueByX &&
+      y <= startPosY + 4.5 * movementValueByY &&
+      y >= startPosY + 3.5 * movementValueByY
     ) {
       hadnleOpen();
     } else {
@@ -65,7 +67,7 @@ export default function MessageContatct() {
             <br />
             <a
               target="_blank"
-              href="https://github.com/EJKim3191"
+              href="https://andykim3191.notion.site/4fef8336710842cb92ca72144dce2229"
               rel="noreferrer"
             >
               💻Notion
@@ -92,14 +94,14 @@ export default function MessageContatct() {
             <br />
             <a
               target="_blank"
-              href="https://velog.io/@dmdwn3979"
+              href="https://dmdwn3979.tistory.com/"
               rel="noreferrer"
             >
-              👨‍🏫Velog
+              👨‍🏫Tistory
             </a>
             <br />
             <br />
-            <a>💌Email</a>
+            <a href="mailto:dmdwn3979@gmail.com">💌Email</a>
           </p>
         </Box>
       </Modal>

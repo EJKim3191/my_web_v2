@@ -18,7 +18,8 @@ const style = {
 function MessageScientist() {
   const x = useSelector((state) => state.main.x);
   const y = useSelector((state) => state.main.y);
-  const movementValue = useSelector((state) => state.main.movementValue);
+  const movementValueByX = useSelector((state) => state.main.movementValueByX);
+  const movementValueByY = useSelector((state) => state.main.movementValueByY);
   const startPosX = useSelector((state) => state.main.startPosX);
   const startPosY = useSelector((state) => state.main.startPosY);
   const [open, setOpen] = useState(false);
@@ -41,10 +42,10 @@ function MessageScientist() {
 
   useEffect(() => {
     if (
-      x <= startPosX - 7.5 * movementValue &&
-      x >= startPosX - 8.5 * movementValue &&
-      y <= startPosY + 0.5 * movementValue &&
-      y >= startPosY - 0.5 * movementValue
+      x <= startPosX - 7.5 * movementValueByX &&
+      x >= startPosX - 8.5 * movementValueByX &&
+      y <= startPosY + 0.5 * movementValueByY &&
+      y >= startPosY - 0.5 * movementValueByY
     ) {
       hadnleOpen();
     } else {
