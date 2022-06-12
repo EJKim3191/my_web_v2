@@ -43,7 +43,7 @@ export default function ProjectNadeulSeoul() {
             <p>
               <a
                 target="_blank"
-                href="http://i6a303.p.ssafy.io/"
+                href="http://nadeulseoul.ga/"
                 id="child-modal-description"
                 rel="noreferrer"
               >

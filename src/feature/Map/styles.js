@@ -38,7 +38,7 @@ export const RedArrow = styled.img`
 export const BlueArrow = styled.img`
   position: absolute;
   width: 3vw;
-  top: 41vh;
+  top: 50vh;
   left: 66vw;
   z-index: 3;
 `;
