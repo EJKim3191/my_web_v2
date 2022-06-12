@@ -16,10 +16,10 @@ function Character() {
     dispatch(setMovementValue());
   }, []);
   useEffect(() => {
-    console.log(x, "x");
-    console.log(y, "y");
-    console.log(screen.availHeight);
-    console.log('availWidth',screen.availWidth);
+    // console.log(x, "x");
+    // console.log(y, "y");
+    // console.log(screen.availHeight);
+    // console.log('availWidth',screen.availWidth);
     console.log('innerWidth',window.innerWidth);
   }, [x, y]);
   return (
