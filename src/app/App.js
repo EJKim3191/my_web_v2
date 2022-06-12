@@ -21,7 +21,6 @@ export default function () {
   const dispatch = useDispatch();
 
   const handleKeyDown = (e) => {
-    console.log(e.keyCode);
     dispatch(handleMove(e));
   };
 
