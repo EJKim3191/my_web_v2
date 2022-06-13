@@ -1,0 +1,17 @@
+[
+    {
+        "title": "나들서울",
+        "description": "Keyword: 여행, 코스, 공유\n Concept: 초록, 깔끔한, 가벼운\n\n 나만의 서울 나들이 코스를 공유하고 다른 사용자들이 큐레이팅 해 놓은 코스를 구경, 저장, 추천할 수 있는 '서울 나들이 코스 공유' 서비스 입니다!\n 먼 곳으로 여행을 떠나기 힘든 요즘, 주변으로라도 놀러 다니고 싶지만 매일 같은 곳만가게 되는 사용자들에게 다른 사람들의 나들이 코스를 소개하고 정보를 제공합니다.",
+        "stack": "React, Redux-Toolkit, Styled-Component, Kakao Map API, Material-UI",
+        "collabTool": "Github, Jira, Notion, Mattermost, Discord",
+        "review": "처음 진행해보는 "
+        
+    },
+    {
+        "title": "삼성청년소프트웨어아카데미 1학기 관통프로젝트",
+        "description": "Java Project -> Web(Front-End) -> Project Web(Back-End) Project -> DB Project -> FrameWork Project -> 알고리즘 적용 Project -> Vue Project -> Final Project 순서로 진행된 관통 프로젝트",
+        "stack": "Vue, Vuex, Java, Spring",
+        "collabTool": "Github, Jira, Notion, Mattermost, Discord",
+        "review": ""
+    }
+]

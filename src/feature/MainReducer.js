@@ -103,8 +103,21 @@ const main = createSlice({
       }
     },
     setScreen: (state) => {
-      state.screenWidth = window.innerWidth;
-      state.screenHeight = window.innerWidth * 9 / 16;
+      //비율이 16:9 보다 세로가 더 길 때
+      if(window.innerHeight * 16 / 9 > window.innerWidth){
+        state.screenWidth = window.innerWidth;
+        state.screenHeight = window.innerWidth * 9 / 16;
+      }
+      //가로가 더 길 때
+      else if(window.innerHeight * 16 / 9 < window.innerWidth){
+        state.screenHeight = window.innerHeight;
+        state.screenWidth = window.innerWidth * 16 / 9;
+      }
+      //같을 때
+      else{
+        state.screenHeight = window.innerHeight;
+        state.screenWidth = window.innerWidth;
+      }
     },
     calcStartPos: (state) => {
       state.x = window.innerWidth / 2;

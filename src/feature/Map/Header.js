@@ -4,7 +4,7 @@ import headerImg from "../../img/pixelImg/header/mainHeader.png";
 function House() {
   return (
     <div>
-      <HeaderImg src={headerImg}></HeaderImg>
+      <HeaderImg src={headerImg} wheight={window.innerHeight} wwidth={window.innerWidth} ></HeaderImg>
     </div>
   );
 }

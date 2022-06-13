@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Modal, Box } from "@mui/material";
-import ProjectNadeulSeoul from "./Projects/ProjectNadeulSeoul";
-import ProjectSamsung from "./Projects/ProjectSamsung";
-import ProjectTras from "./Projects/ProjectTras";
-import ProjectGraduation from "./Projects/ProjectsGraduation";
-
+import ProjectTemplate from "./Projects/ProjectTemplate";
+import projectInfo from './Projects/projectInfo.json'
 const style = {
   position: "absolute",
   top: "50%",
@@ -65,13 +62,10 @@ export default function MessageProjects() {
             혹시... 관심이 생겼다면... <a style={{ color: "red" }}>노션</a>에 더
             많은 정보가 있다하니... 꼭 들려주시길...
           </p>
-          <ProjectNadeulSeoul />
-          <br />
-          <ProjectSamsung />
-          <br />
-          <ProjectTras />
-          <br />
-          <ProjectGraduation />
+          {projectInfo.map((project, i) => {
+            return <ProjectTemplate key={i} project={project} />
+          })}
+
         </Box>
       </Modal>
     </div>
