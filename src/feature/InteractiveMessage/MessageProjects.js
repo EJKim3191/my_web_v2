@@ -36,8 +36,8 @@ export default function MessageProjects() {
     if (
       x <= startPosX + 8.5 * movementValueByX &&
       x >= startPosX + 7.5 * movementValueByX &&
-      y <= startPosY + 1.5 * movementValueByY &&
-      y >= startPosY + 0.5 * movementValueByY
+      y <= startPosY - 5.5 * movementValueByY &&
+      y >= startPosY - 6.5 * movementValueByY
     ) {
       hadnleOpen();
     } else {

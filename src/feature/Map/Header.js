@@ -1,11 +1,9 @@
 import React from "react";
 import { HeaderImg } from "./styles";
 import headerImg from "../../img/pixelImg/header/mainHeader.png";
-function House() {
+function Header() {
   return (
-    <div>
-      <HeaderImg src={headerImg} wheight={window.innerHeight} wwidth={window.innerWidth} ></HeaderImg>
-    </div>
+    <HeaderImg src={headerImg}></HeaderImg>
   );
 }
-export default House;
+export default Header;

@@ -5,7 +5,7 @@ import noonbackground from "../img/pixelImg/background/noonbackground.png"; // 1
 import sunsetbackground from "../img/pixelImg/background/sunsetbackground.png"; // 17->20
 import nightbackgroundwithmoon from "../img/pixelImg/background/nightbackgroundwithmoon.png"; // 20-> 05
 import dawnbackground from "../img/pixelImg/background/dawnbackground.png"; //05->12
-import { Background, Background2 } from "./styles";
+import { BackgroundContainer, Background } from "./styles";
 
 function LandingPage() {
   const [background, setBackground] = useState(noonbackground);
@@ -24,10 +24,9 @@ function LandingPage() {
   }, []);
 
   return (
-    <div>
-      <Background alt="background" src={background} wheight={window.innerHeight} wwidth={window.innerWidth} />
-      <Background2 />
-    </div>
+    <BackgroundContainer>
+      <Background alt="background" src={background} />
+    </BackgroundContainer>
   );
 }
 

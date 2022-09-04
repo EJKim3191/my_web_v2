@@ -3,24 +3,18 @@ import React, { useEffect, useState } from "react";
 import test_character_1 from "../../img/pixelImg/character/test_character_1.png";
 import { CharacterImg } from "./styles";
 import { useDispatch, useSelector } from "react-redux";
-import { calcStartPos, setMovementValue, setScreen } from "../MainReducer";
+import { setScreen } from "../MainReducer";
 
 function Character() {
   const dispatch = useDispatch();
 
   const x = useSelector((state) => state.main.x);
   const y = useSelector((state) => state.main.y);
+  console.log(x,y)
   useEffect(() => {
     dispatch(setScreen());
-    dispatch(calcStartPos());
-    dispatch(setMovementValue());
   }, []);
   useEffect(() => {
-    // console.log(x, "x");
-    // console.log(y, "y");
-    // console.log(screen.availHeight);
-    // console.log('availWidth',screen.availWidth);
-    console.log('innerWidth',window.innerWidth);
   }, [x, y]);
   return (
     <CharacterImg

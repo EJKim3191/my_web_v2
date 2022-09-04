@@ -43,12 +43,14 @@ function MessageScientist() {
   useEffect(() => {
     if (
       x <= startPosX - 7.5 * movementValueByX &&
-      x >= startPosX - 8.5 * movementValueByX &&
-      y <= startPosY + 0.5 * movementValueByY &&
-      y >= startPosY - 0.5 * movementValueByY
+      x >= startPosX - 10.5 * movementValueByX &&
+      y <= startPosY - 4.5 * movementValueByY &&
+      y >= startPosY - 6.5 * movementValueByY
     ) {
+      console.log("open", x, y, startPosX, startPosY, movementValueByX)
       hadnleOpen();
     } else {
+      console.log("close")
       handleClose();
     }
   }, [x, y]);

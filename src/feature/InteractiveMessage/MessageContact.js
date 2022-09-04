@@ -34,10 +34,10 @@ export default function MessageContatct() {
   };
   useEffect(() => {
     if (
-      x <= startPosX + 2.5 * movementValueByX &&
-      x >= startPosX + 1.5 * movementValueByX &&
-      y <= startPosY + 4.5 * movementValueByY &&
-      y >= startPosY + 3.5 * movementValueByY
+      x <= startPosX + 0.5 * movementValueByX &&
+      x >= startPosX - 1.5 * movementValueByX &&
+      y <= startPosY - 1.5 * movementValueByY &&
+      y >= startPosY - 2.5 * movementValueByY
     ) {
       hadnleOpen();
     } else {

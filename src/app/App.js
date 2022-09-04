@@ -14,8 +14,10 @@ import MessageProjects from "../feature/InteractiveMessage/MessageScientist";
 import MessageContatct from "../feature/InteractiveMessage/MessageContact";
 import { useDispatch, useSelector } from "react-redux";
 import { handleMove } from "../feature/MainReducer";
-// eslint-disable-next-line no-unused-vars
+// CSS
+import { App, MainContainer, Background } from "./App.styles";
 
+// eslint-disable-next-line no-unused-vars
 // eslint-disable-next-line react/display-name
 export default function () {
   const dispatch = useDispatch();
@@ -29,16 +31,19 @@ export default function () {
   }, []);
 
   return (
-    <div>
-      <LandingPage />
-      <Header />
-      <House />
-      <Character />
-      <Interactive_Person />
-      <Interactive_Obstacles />
-      <MessageScientist />
-      <MessageProjects />
-      <MessageContatct />
-    </div>
+    <App>
+      <Background />
+      <MainContainer>
+        <LandingPage />
+        <Header />
+        <House />
+        <Character />
+        <Interactive_Person />
+        <Interactive_Obstacles />
+        <MessageScientist />
+        <MessageProjects />
+        <MessageContatct />
+      </MainContainer>
+    </App>
   );
 }
