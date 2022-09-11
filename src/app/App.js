@@ -1,49 +1,64 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect } from "react";
-import LandingPage from "../feature/LandingPage";
-// 케릭터
-import Character from "../feature/Character/Character";
-// 맵과 맵 구조물
-import Header from "../feature/Map/Header";
-import House from "../feature/Map/House";
-import Interactive_Person from "../feature/Map/Interactive_Person";
-import Interactive_Obstacles from "../feature/Map/Interactive_Obstacles";
-// Interactive message
-import MessageScientist from "../feature/InteractiveMessage/MessageProjects";
-import MessageProjects from "../feature/InteractiveMessage/MessageScientist";
-import MessageContatct from "../feature/InteractiveMessage/MessageContact";
+import React, { useEffect, useState } from "react";
+
 import { useDispatch, useSelector } from "react-redux";
-import { handleMove } from "../feature/MainReducer";
+import Intro from "../feature/Intro";
+import { handleMove, setChapter } from "../feature/MainReducer";
+import ChapterOne from "../page/ChapterOne";
+import Prologue from "../page/Prologue";
+
 // CSS
-import { App, MainContainer, Background } from "./App.styles";
+import { App, PrologueContainer, Background, ChapterOneContainer } from "./App.styles";
+
+const introText = {
+  prologue: {
+    header: "Prologue",
+    text: "preparations for a leap forward"
+  },
+  chapter_one: {
+    header: "Chapter 1",
+    text: "Frontend Software Developer"
+  }
+}
 
 // eslint-disable-next-line no-unused-vars
 // eslint-disable-next-line react/display-name
 export default function () {
   const dispatch = useDispatch();
+  const chapter = useSelector((state) => state.main.chapter);
 
   const handleKeyDown = (e) => {
-    dispatch(handleMove(e));
+    if(chapter % 2 === 0) dispatch(setChapter(chapter+1))
+    else if(chapter === 1) dispatch(handleMove(e));
   };
 
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
-  }, []);
+  }, [chapter]);
 
   return (
     <App>
       <Background />
-      <MainContainer>
-        <LandingPage />
-        <Header />
-        <House />
-        <Character />
-        <Interactive_Person />
-        <Interactive_Obstacles />
-        <MessageScientist />
-        <MessageProjects />
-        <MessageContatct />
-      </MainContainer>
+      {
+        chapter === 0 && 
+        <Intro header={introText.prologue.header} text={introText.prologue.text}/>
+      }
+      {
+        chapter === 1 &&
+        <PrologueContainer>
+            <Prologue />
+        </PrologueContainer>
+      }
+      {
+        chapter === 2 &&
+        <Intro header={introText.chapter_one.header} text={introText.chapter_one.text}/>
+      }
+      {
+        chapter === 3 &&
+        <ChapterOneContainer>
+          <ChapterOne />
+        </ChapterOneContainer>
+      }
     </App>
   );
 }

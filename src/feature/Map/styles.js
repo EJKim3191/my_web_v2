@@ -54,3 +54,13 @@ export const YellowArrow = styled.img`
   left: 485px;
   z-index: 3;
 `;
+export const LoopWarp = styled.img`
+  position: absolute;
+  width: 3vw;
+  top: 570px;
+  left: 1150px;
+  height: 80px;
+  border-radius: 15px 15px 0px 0px;
+  border: 3px solid black;
+  z-index: 3;
+`

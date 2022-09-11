@@ -15,6 +15,8 @@ const main = createSlice({
     // 처음 위치
     startPosX: 750,
     startPosY: 600,
+    // 게임 쳅터
+    chapter: 0,
   },
   reducers: {
     handleMove: (state, action) => {
@@ -122,9 +124,13 @@ const main = createSlice({
         state.screenWidth = window.innerWidth;
       }
     },
+    setChapter: (state, action) => {
+      console.log(action.payload)
+      state.chapter = action.payload;
+    }
   },
 });
 
-export const { handleMove, setScreen } =
+export const { handleMove, setScreen, setChapter } =
   main.actions;
 export default main.reducer;
