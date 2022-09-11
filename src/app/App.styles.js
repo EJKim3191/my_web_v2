@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const App = styled.div`
     display: flex;
-    widht: 100%;
+    width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -16,13 +16,17 @@ export const PrologueContainer = styled.div`
 `
 export const Background = styled.img`
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     background-color: black;
 `;
 export const ChapterOneContainer = styled.div`
-    grid-template-columns: 1fr 1fr 1fr
-    grid-template-rows: 1fr 1fr 1fr
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
 `
