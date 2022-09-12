@@ -1,7 +1,9 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import GithubStats from "../../feature/Github/GithubStats";
 import { Badge } from "../../feature/MyProfile/Badge";
 import { Post } from "../../feature/Post";
+import { Repos } from "../../feature/Repos";
 import { StyledGithubStats, StyledBadges, StyledPosts, StyledRepos } from "./styles"
 
 const stacks = [
@@ -71,7 +73,7 @@ const ChapterOne = () => {
                 <Post src={`https://dmdwn3979.tistory.com/`}/>
             </StyledPosts>
             <StyledRepos>
-                <Post src={`https://github.com/EJKim3191?tab=repositories`}/>
+                <Repos />
             </StyledRepos>
         </>
     )

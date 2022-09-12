@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import Intro from "../feature/Intro";
@@ -27,13 +27,16 @@ export default function () {
   const dispatch = useDispatch();
   const chapter = useSelector((state) => state.main.chapter);
 
-  const handleKeyDown = (e) => {
-    if(chapter % 2 === 0) dispatch(setChapter(chapter+1))
-    else if(chapter === 1) dispatch(handleMove(e));
-  };
+  // 이벤트핸들러 삭제 필요 ...
+  const handleKeyDown = useCallback((e) => {
+    console.log(chapter, e)
+    if(chapter === 0 || chapter === 2) dispatch(setChapter(chapter+1))
+    else if(chapter === 1) dispatch(handleMove(e))
+  }, [chapter]) 
 
   useEffect(() => {
-    window.addEventListener("keydown", handleKeyDown);
+    window.removeEventListener("keydown", handleKeyDown);
+    if(chapter < 3) window.addEventListener("keydown", handleKeyDown);
   }, [chapter]);
 
   return (
