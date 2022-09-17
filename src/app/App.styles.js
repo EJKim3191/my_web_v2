@@ -28,5 +28,7 @@ export const ChapterOneContainer = styled.div`
     height: 100%;
     top: 0;
     left: 0;
-    background-color: white;
+    background-color: rgb(245, 245, 245);
+    // box-shadow: 0 0 0 10px rgb(69, 123, 150) inset;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px inset;
 `

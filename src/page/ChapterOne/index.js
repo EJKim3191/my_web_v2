@@ -4,8 +4,9 @@ import GithubStats from "../../feature/Github/GithubStats";
 import { Badge } from "../../feature/MyProfile/Badge";
 import { Post } from "../../feature/Post";
 import { Repos } from "../../feature/Repos";
-import { StyledGithubStats, StyledBadges, StyledPosts, StyledRepos } from "./styles"
-
+import { StyledGithubStats, StyledBadges, StyledPosts, StyledRepos, StyledBuisnessCard } from "./styles"
+import Card from '@mui/material/Card';
+import { BuisnessCard } from "../../feature/BuisnessCard";
 const stacks = [
     {
         text: "HTML",
@@ -59,22 +60,35 @@ const ChapterOne = () => {
 
     return (
         <>
+            <StyledBuisnessCard>
+                <Card>
+                    <BuisnessCard />
+                </Card>
+            </StyledBuisnessCard>
             <StyledBadges>
+                <Card>
                 {stacks.map((stack, i)=>{
                     return <Badge key={i} text={stack.text} color={stack.color} icon={stack.icon}/>
                 })}
-                
+                </Card>
             </StyledBadges>
             <StyledGithubStats>
-                <GithubStats />
+                <Card>
+                    <GithubStats />
+                </Card>
             </StyledGithubStats>
 
             <StyledPosts>
-                <Post src={`https://dmdwn3979.tistory.com/`}/>
+                <Card sx={{ height: 870 }}>
+                    <Post src={`https://dmdwn3979.tistory.com/`}/>
+                </Card>
             </StyledPosts>
             <StyledRepos>
-                <Repos />
+                <Card>
+                    <Repos />
+                </Card>
             </StyledRepos>
+
         </>
     )
 }

@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import axios from "axios"
 
 const main = createSlice({
   name: "MainReducer",
@@ -18,7 +17,7 @@ const main = createSlice({
     startPosY: 600,
     // 게임 쳅터
     chapter: 0,
-
+    // 개인 레포 리스트
     repoList: [],
   },
   reducers: {
@@ -130,13 +129,9 @@ const main = createSlice({
     setChapter: (state, action) => {
       state.chapter = action.payload;
     },
-    setRepoList: async (state, action) => {
-      await axios.get(`https://api.github.com/users/${action.payload}/repos`).then(
-        list => {
-          state.repoList = [...list.data];
-          console.log(state.repoList)
-        }
-      )
+    setRepoList: (state, action) => {
+      state.repoList = action.payload;
+      console.log(action.payload)
     }
   },
 });

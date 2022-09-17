@@ -1,11 +1,12 @@
 /* eslint-disable no-unused-vars */
-import React, { useCallback, useEffect, useState } from "react";
-
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Intro from "../feature/Intro";
-import { handleMove, setChapter } from "../feature/MainReducer";
+import { handleMove, setChapter, setRepoList } from "../feature/MainReducer";
 import ChapterOne from "../page/ChapterOne";
 import Prologue from "../page/Prologue";
+
+import axios from "axios";
 
 // CSS
 import { App, PrologueContainer, Background, ChapterOneContainer } from "./App.styles";
@@ -26,17 +27,26 @@ const introText = {
 export default function () {
   const dispatch = useDispatch();
   const chapter = useSelector((state) => state.main.chapter);
+  const ref = useRef();
 
   // 이벤트핸들러 삭제 필요 ...
-  const handleKeyDown = useCallback((e) => {
-    console.log(chapter, e)
-    if(chapter === 0 || chapter === 2) dispatch(setChapter(chapter+1))
+  const handleKeyDown = ((e) => {
+    if(chapter % 2 === 0) dispatch(setChapter(chapter+1))
     else if(chapter === 1) dispatch(handleMove(e))
-  }, [chapter]) 
+
+    ref.current = handleKeyDown;
+  })
+
+  useEffect(async ()=>{
+    const result = await axios.get(`https://api.github.com/users/${`EJKim3191`}/repos`);
+    console.log(result)
+    dispatch(setRepoList(result.data));
+  },[])
 
   useEffect(() => {
-    window.removeEventListener("keydown", handleKeyDown);
-    if(chapter < 3) window.addEventListener("keydown", handleKeyDown);
+    window.removeEventListener("keydown", ref.current);
+    window.addEventListener("keydown", handleKeyDown);
+    console.log("### 현 챕터는: ", chapter)
   }, [chapter]);
 
   return (
