@@ -65,9 +65,7 @@ export default function MessageNextRoom() {
                 console.log(chapter+1)
                 dispatch(setChapter(chapter+1))}
                 }>네</Button>
-            <br/>
-            <br/>
-            <Button>아니요</Button>
+            <Button onClick={handleClose}>아니요</Button>
           </p>
         </Box>
       </Modal>

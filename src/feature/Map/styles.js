@@ -14,7 +14,7 @@ export const HeaderImg = styled.img`
   width: 1000px;
   height: 300px;
   top: 0;
-  z-index: 3333;
+  z-index: 333;
 `;
 export const HouseImg = styled.img`
   display: inline-block;
