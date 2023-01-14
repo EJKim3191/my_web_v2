@@ -59,11 +59,11 @@ export default function MessageProjects() {
             남긴다...
           </p>
           <p>
-            혹시... 관심이 생겼다면... <a style={{ color: "red" }}>노션</a>에 더
+            혹시... 관심이 생겼다면... <a href="https://www.notion.so/andykim3191/4fef8336710842cb92ca72144dce2229" style={{ color: "red" }}>노션</a>에 더
             많은 정보가 있다하니... 꼭 들려주시길...
           </p>
           {projectInfo.map((project, i) => {
-            return <ProjectTemplate key={i} project={project} />
+            return <section key={project.title}><ProjectTemplate key={i} project={project} /></section>
           })}
 
         </Box>
