@@ -1,70 +1,61 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
 import GithubStats from "../../feature/Github/GithubStats";
 import { Badge } from "../../feature/MyProfile/Badge";
 import { Post } from "../../feature/Post";
 import { Repos } from "../../feature/Repos";
-import { StyledGithubStats, StyledBadges, StyledPosts, StyledRepos, StyledBuisnessCard } from "./styles"
+import { StyledPage, StyledGithubStats, StyledBadges, StyledPosts, StyledRepos, StyledBuisnessCard, StyledMe, StyledPic, StyledFlexRow, StyledFlexCol, StyledHeader, StyledLeft, StyledRight, StyledArrow } from "./styles"
 import Card from '@mui/material/Card';
 import { BuisnessCard } from "../../feature/BuisnessCard";
-const stacks = [
-    {
-        text: "HTML",
-        color: "orange",
-        icon: "HTML5"
-    },
-    {
-        text: "CSS",
-        color: "blue",
-        icon: "CSS3"
-    },
-    {
-        text: "Javascript",
-        color: "yellow",
-        icon: "Javascript"
-    },
-    {
-        text: "React.js",
-        color: "blue",
-        icon: "React"
-    },
-    {
-        text: "Next.js",
-        color: "black",
-        icon: "Next.js"
-    },
-    {
-        text: "Node.js",
-        color: "green",
-        icon: "Node.js"
-    },
-    {
-        text: "TypeScript",
-        color: "blue",
-        icon: "TypeScript"
-    },
-    {
-        text: "Sass",
-        color: "pink",
-        icon: "Sass"
-    },
-    {
-        text: "styled components",
-        color: "blue",
-        icon: "styled-components"
-    },
+import stacks from "./stacks.json"
 
-]
+const cardLimit = 1;
 
 const ChapterOne = () => {
+    const [card, setCard] = useState(1)
 
+    const handleArrow = (num) =>{
+        if(num === -1){
+            if(card === 0) return;
+            else setCard(card + num);
+        }
+        else{
+            if(card === cardLimit) return;
+            else setCard(card + num);
+        }
+    }
     return (
-        <>
-            <StyledBuisnessCard>
-                <Card>
-                    <BuisnessCard />
-                </Card>
-            </StyledBuisnessCard>
+        <StyledPage>
+            <StyledMe>
+                <StyledLeft>
+                    <StyledFlexCol>
+                        <StyledHeader>
+                            <b>계</b>속 <br/>
+                            <b>발</b>전<b>하는</b> <br/>
+                            <b>개발자</b>
+                        </StyledHeader>
+                    </StyledFlexCol>
+                </StyledLeft>
+                <StyledRight>
+                    <StyledFlexCol>
+                        <StyledPic />
+                        <StyledBuisnessCard>
+                            <Card>
+                                <BuisnessCard type={card} />
+                            </Card>
+                            <StyledArrow>
+                                <button onClick={()=>handleArrow(-1)}>
+                                    left
+                                </button>
+                                <button onClick={()=>handleArrow(1)}>
+                                    right
+                                </button>
+                            </StyledArrow>
+                        </StyledBuisnessCard>
+                    </StyledFlexCol>
+                </StyledRight>
+            </StyledMe>
+
             <StyledBadges>
                 <Card>
                 {stacks.map((stack, i)=>{
@@ -89,7 +80,7 @@ const ChapterOne = () => {
                 </Card>
             </StyledRepos>
 
-        </>
+        </StyledPage>
     )
 }
 

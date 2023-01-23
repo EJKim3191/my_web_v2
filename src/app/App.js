@@ -52,7 +52,7 @@ export default function () {
   return (
     <App>
       <Background />
-      {
+      {/* {
         chapter === 0 && 
         <Intro header={introText.prologue.header} text={introText.prologue.text}/>
       }
@@ -65,9 +65,9 @@ export default function () {
       {
         chapter === 2 &&
         <Intro header={introText.chapter_one.header} text={introText.chapter_one.text}/>
-      }
+      } */}
       {
-        chapter === 3 &&
+        // chapter === 3 &&
         <ChapterOneContainer>
           <ChapterOne />
         </ChapterOneContainer>
