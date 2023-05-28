@@ -1,14 +1,27 @@
 import styled from "styled-components";
 import my_pic from "../../img/mypic/my_pic.JPG"
 export const StyledPage = styled.section`
+    scroll-behavior: smooth;
 `
 
 export const StyledMe = styled.div`
     position: relative;
     width: 100%;
-    height: 900px;
+    height: 80vh;
 
+    margin-top: 10vh;
+    margin-bottom: 10vh;
     background-color: #e6f8f3;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px inset;
+`
+export const StyledGit = styled.div`
+    position: relative;
+    width: 100%;
+    height: 80vh;
+
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    background-color: #green;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px inset;
 `
 export const StyledLeft = styled.div`
