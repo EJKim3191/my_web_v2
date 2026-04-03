@@ -77,7 +77,7 @@ export default function () {
         />
       )}
       {chapter === 3 && (
-        <ChapterOneContainer>{/* <ChapterOne /> */}</ChapterOneContainer>
+        <ChapterOneContainer>{<ChapterOne />}</ChapterOneContainer>
       )}
     </App>
   );
