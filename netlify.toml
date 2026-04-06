@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/proxy/*"
+  to = "https://team-scheduler-ai-omega.vercel.app/:splat"
+  status = 200
+  force = true
